@@ -17,7 +17,7 @@ try:
         msg = str(d)                
         print("temp", msg)
         
-        infot = mqttc.publish("room1/temp", t)
+        infot = mqttc.publish("room1/temp", msg)
         infot.wait_for_publish()
         
         time.sleep(1)
